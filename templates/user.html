@@ -1,0 +1,32 @@
+{%extends 'usersbase.html'%}
+    
+{% block content %}
+
+{% if name %}
+    
+    <div class="container">
+    <h5>Alumni Records</h5>
+    
+    <br/>
+    <h3><b>{{ name }}</b></h3>
+    <p>Went through CodePlateau 3.0 and graduated March, 2022.</p>
+    </div>
+    {% else %}
+    
+    <div class="container">
+    <h3>Enter full name to view student record</h3>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        {{ form.name.label (class="form-label") }}
+        {{ form.name(class="form-control") }}
+        <br/>
+        {{ form.submit(class="btn btn-primary") }}
+    </form>
+    </div>
+{%endif%}
+    
+{% endblock %}
+    
+

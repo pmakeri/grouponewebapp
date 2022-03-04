@@ -1,0 +1,12 @@
+
+.bg-cover {
+    background-size: cover !important;
+}
+
+.display h1 {
+    padding-top: 100px;
+}
+
+.display .but{
+    padding: 25px;
+}
